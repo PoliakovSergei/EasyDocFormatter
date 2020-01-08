@@ -1,0 +1,16 @@
+spring:
+  liquibase:
+    change-log: file:edf-docker/postgre-db/liquibase/dbChangeLog.xml
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5434/postgres
+#    driver-class-name: org.h2.Driver
+#    url: jdbc:h2:mem:test
+    username: user
+    password: passw0rd
+  h2:
+    console:
+      enabled: true
+logging:
+  level:
+    liquibase: INFO

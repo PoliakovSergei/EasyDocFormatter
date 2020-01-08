@@ -1,0 +1,28 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <changeSet id="logDbCreate" author="Sergei">
+        <preConditions>
+            <not>
+                <tableExists tableName="logtable"/>
+            </not>
+        </preConditions>
+        <createTable tableName="logtable">
+            <column autoIncrement="true" name="id" type="BIGINT">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="user" type="VARCHAR(255)"/>
+            <column name="message" type="VARCHAR(255)"/>
+            <column name="date" type="TIMESTAMP"/>
+        </createTable>
+        <rollback>
+            <dropTable tableName="logtable"/>
+        </rollback>
+    </changeSet>
+</databaseChangeLog>

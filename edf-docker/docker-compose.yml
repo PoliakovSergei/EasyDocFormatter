@@ -1,0 +1,18 @@
+version: "3.7"
+
+services:
+    db:
+        build: ./postgre-db
+        image: postgre-db:latest
+        container_name: "postgre-db"
+        environment:
+            POSTGRES_USER: user
+            POSTGRES_PASSWORD: passw0rd
+            POSTGRES_DB: postgres
+        ports:
+                - "5434:5432"
+        restart: always
+
+
+
+
