@@ -8,3 +8,6 @@
  */
 
 rootProject.name = 'EasyDocFormatter'
+
+include 'edf-back'
+include 'edf-docker'

@@ -8,3 +8,11 @@ EasyDocFormatter.iml
 # Ignore Gradle build output directory
 build
 lib
+.settings/org.eclipse.buildship.core.prefs
+edf-back/.project
+edf-back/.classpath
+edf-back/.settings/org.eclipse.buildship.core.prefs
+edf-docker/.classpath
+edf-docker/.project
+edf-docker/.settings/org.eclipse.buildship.core.prefs
+/edf-back/bin/

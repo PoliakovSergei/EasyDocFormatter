@@ -7,6 +7,6 @@
     http://www.liquibase.org/xml/ns/dbchangelog
     http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
 
-    <include file="file:edf-docker/postgre-db/liquibase/2020_01/createLogTable.xml"/>
+    <include file="classpath:postgre-db/liquibase/2020_01/createLogTable.xml"/>
 
 </databaseChangeLog>

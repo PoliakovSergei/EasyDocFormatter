@@ -1,48 +1,11 @@
-buildscript {
+allprojects {
+    group = 'com.sergo.edf'
+}
+
+subprojects {
+    version = '0.0.1-SNAPSHOT'
     repositories {
+        jcenter()
         mavenCentral()
     }
-    dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.2.2.RELEASE")
-    }
-}
-
-plugins {
-    id 'java'
-    id 'application'
-    id 'idea'
-    id "org.springframework.boot" version "2.2.2.RELEASE"
-    id "io.spring.dependency-management" version "1.0.8.RELEASE"
-    id "org.liquibase.gradle" version "2.0.2"
-}
-
-repositories {
-    jcenter()
-    mavenCentral()
-}
-
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
-
-dependencies {
-    // This dependency is used by the application.
-    implementation 'com.google.guava:guava:28.0-jre'
-    implementation 'org.springframework.boot:spring-boot-starter-web:2.2.2.RELEASE'
-    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    compileOnly 'org.projectlombok:lombok:1.18.10'
-    annotationProcessor 'org.projectlombok:lombok:1.18.10'
-    compile group: 'org.liquibase', name: 'liquibase-core', version: '3.8.4'
-    compile group: 'org.springframework.data', name: 'spring-data-jpa', version: '2.2.3.RELEASE'
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-jdbc', version: '2.2.2.RELEASE'
-    compile group: 'org.postgresql', name: 'postgresql', version: '42.2.9'
-//    compile group: 'javax.persistence', name: 'persistence-api', version: '1.0'
-
-    // Use JUnit test framework
-    testCompile group: 'com.h2database', name: 'h2', version: '1.4.200'
-    testImplementation 'junit:junit:4.12'
-}
-
-application {
-    // Define the main class for the application
-    mainClassName = 'com.sergo.edf.AppStarter'
 }

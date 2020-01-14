@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
     db:
-        build: ./postgre-db
+        build: postgre-db
         image: postgre-db:latest
         container_name: "postgre-db"
         environment:
